@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Website Pertamaku</title>
+
+    <style>
+        /* Mengatur seluruh halaman */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+
+            /* Background gambar */
+            background-image: url("background.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+
+            color: white;
+            text-align: center;
+        }
+
+        /* Bagian utama */
+        .container {
+            min-height: 100vh;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        /* Judul */
+        h1 {
+            font-size: 45px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        /* Gambar */
+        .gambar {
+            width: 300px;
+            border-radius: 15px;
+            margin: 20px;
+        }
+
+        /* Tombol */
+        button {
+            padding: 12px 25px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Halo, Dunia! 👋</h1>
+
+        <p>Selamat datang di website pertamaku.</p>
+
+        <!-- Gambar -->
+        <img 
+            src="gambar.jpg" 
+            alt="Gambar website"
+            class="gambar"
+        >
+
+        <!-- Tombol -->
+        <button onclick="tampilkanPesan()">
+            KLIK SAYA
+        </button>
+
+        <!-- Tempat pesan muncul -->
+        <p id="pesan"></p>
+
+    </div>
+
+    <script>
+        function tampilkanPesan() {
+            document.getElementById("pesan").innerHTML =
+                "🎉 Halo! Tombol berhasil ditekan!";
+        }
+    </script>
+
+</body>
+
+</html>
